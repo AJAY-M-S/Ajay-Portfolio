@@ -1027,6 +1027,11 @@
       background: linear-gradient(160deg, #e8fff9, #a8f0e8);
       transform: rotate(0.8deg);
     }
+    .cert-card:last-child {
+      grid-column: 1 / -1;
+      justify-self: center;
+      max-width: 420px;
+    }
     .cert-avatar {
       width: 48px; height: 48px;
       border: var(--outline-thick);
@@ -1318,11 +1323,38 @@
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto;
         text-align: center;
+        justify-items: center;
       }
-      .hero-title-block { grid-column: 1; grid-row: 1; padding: 0; }
-      .hero-character-zone { grid-column: 1; grid-row: 2; min-height: 300px; }
-      .hero-content-below { grid-column: 1; grid-row: 3; }
+      .hero-title-block {
+        grid-column: 1;
+        grid-row: 1;
+        padding: 0;
+        justify-self: center;
+        width: min(100%, 680px);
+      }
+      .hero-character-zone {
+        grid-column: 1;
+        grid-row: 2;
+        min-height: 300px;
+        justify-self: center;
+      }
+      .hero-content-below {
+        grid-column: 1;
+        grid-row: 3;
+        justify-self: center;
+        max-width: 720px;
+      }
+      .hero-eyebrow {
+        margin-left: auto;
+        margin-right: auto;
+      }
       .finger-glow { top: 5%; right: 22%; }
+      .skills-stage, .projects-grid, .certs-grid, .contact-grid {
+        justify-items: center;
+      }
+      .project-card, .stat-card, .cert-card, .contact-card {
+        transform: none !important;
+      }
     }
 
     @media (max-width: 768px) {
@@ -1386,6 +1418,7 @@
           <li><a href="#skills" data-section="skills">Skills</a></li>
           <li><a href="#projects" data-section="projects">Projects</a></li>
           <li><a href="#experience" data-section="experience">Experience</a></li>
+          <li><a href="#achievements" data-section="achievements">Achievements</a></li>
           <li><a href="#certifications" data-section="certifications">Certs</a></li>
           <li><a href="#contact" data-section="contact">Contact</a></li>
         </ul>
@@ -1397,6 +1430,7 @@
         <li><a href="#skills" data-section="skills">Skills</a></li>
         <li><a href="#projects" data-section="projects">Projects</a></li>
         <li><a href="#experience" data-section="experience">Experience</a></li>
+        <li><a href="#achievements" data-section="achievements">Achievements</a></li>
         <li><a href="#certifications" data-section="certifications">Certifications</a></li>
         <li><a href="#contact" data-section="contact">Contact</a></li>
       </ul>
@@ -1736,23 +1770,46 @@
     </div>
   </section>
 
+  <section id="achievements">
+    <div class="section-divider"></div>
+    <p class="section-label reveal-item">05 — Achievements</p>
+    <h2 class="section-title reveal-item">ACHIEVEMENTS</h2>
+    <div class="about-bio reveal-item">
+      <p class="section-label" style="margin-top: 24px;">Hack2TechSustain Finalist</p>
+      <ul class="timeline-bullets">
+        <li>Built a privacy-first campus safety platform in 24 hours with a React Native mobile app and a real-time web control-room dashboard.</li>
+        <li>Designed the system around identity-agnostic incident response with auto-deleting evidence and zero-knowledge safety operations.</li>
+      </ul>
+      <p class="section-label" style="margin-top: 24px;">AU-Tekion Innovation Lab Showcase</p>
+      <ul class="timeline-bullets">
+        <li>Presented the IoT Firefighting Robot at the AU-Tekion Innovation Lab, MIT Campus, Anna University.</li>
+        <li>Showcased the project in collaboration with Tekion Corp on a real innovation lab platform.</li>
+      </ul>
+      <p class="section-label" style="margin-top: 24px;">Badminton Medalist</p>
+      <ul class="timeline-bullets">
+        <li>Secured several medals in the badminton tournaments, showcasing competitive spirit and teamwork.</li>
+    </div>
+  </section>
+
   <section id="certifications">
     <div class="section-divider"></div>
-    <p class="section-label reveal-item">05 — Credentials</p>
+    <p class="section-label reveal-item">06 — Credentials</p>
     <h2 class="section-title reveal-item">CERTIFICATIONS</h2>
     <div class="certs-grid">
+      <div class="cert-card reveal-item"><div class="cert-avatar">P</div><div class="cert-name">Python for Data Science</div><div class="cert-issuer">NPTEL</div><span class="cert-date">Aug 2025</span></div>
       <div class="cert-card reveal-item"><div class="cert-avatar">D</div><div class="cert-name">Predictive Modeling</div><div class="cert-issuer">DevTown</div><span class="cert-date">Jul 2025</span></div>
       <div class="cert-card reveal-item"><div class="cert-avatar">G</div><div class="cert-name">Machine Learning in Action</div><div class="cert-issuer">Google Developer Groups</div><span class="cert-date">Mar 2025</span></div>
       <div class="cert-card reveal-item"><div class="cert-avatar">I</div><div class="cert-name">Artificial Intelligence Fundamentals</div><div class="cert-issuer">IBM SkillsBuild</div><span class="cert-date">Mar 2025</span></div>
       <div class="cert-card reveal-item"><div class="cert-avatar">G</div><div class="cert-name">Mastering DSA Patterns</div><div class="cert-issuer">Google Developer Groups</div><span class="cert-date">Mar 2025</span></div>
       <div class="cert-card reveal-item"><div class="cert-avatar">N</div><div class="cert-name">Programming, Data Structures &amp; Algorithms using Python</div><div class="cert-issuer">NPTEL</div><span class="cert-date">Sep 2024</span></div>
       <div class="cert-card reveal-item"><div class="cert-avatar">N</div><div class="cert-name">Advanced Diploma in Computer Application</div><div class="cert-issuer">Neon Computer Education</div><span class="cert-date">Oct 2023</span></div>
+
     </div>
   </section>
 
   <section id="contact">
     <div class="section-divider"></div>
-    <p class="section-label reveal-item">06 — Connect</p>
+    <p class="section-label reveal-item">07 — Connect</p>
     <h2 class="section-title reveal-item">LET'S CONNECT</h2>
     <p class="section-sub reveal-item">Open to internships, collaborations, and building cool things.</p>
     <div class="contact-grid">
@@ -1796,7 +1853,7 @@
       let isMuted = false;
       let hasStarted = false;
       
-      bgMusic.volume = 0.3;
+      bgMusic.volume = 0.4;
       bgMusic.muted = false;
       
       function removeStartListeners() {
@@ -1929,7 +1986,7 @@
 
     /* Active nav */
     (function () {
-      var sectionIds = ['about', 'skills', 'projects', 'experience', 'certifications', 'contact'];
+      var sectionIds = ['about', 'skills', 'projects', 'experience', 'achievements', 'certifications', 'contact'];
       var links = document.querySelectorAll('[data-section]');
       var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
